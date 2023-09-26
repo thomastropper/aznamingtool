@@ -1,6 +1,6 @@
 name: .NET Core-Anwendung in Web-App "app-azn-prd-we-01" erstellen und bereitstellen
 on:
-  push:
+  workflow_dispatch:
     branches:
     - main
 env:
