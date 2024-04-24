@@ -1,4 +1,4 @@
-name: .NET Core-Anwendung in Web-App "app-we-azn-prd-01" erstellen und bereitstellen
+name: PROD Build and deploy app-we-azn-prd-01
 on:
   workflow_dispatch:
     branches:
