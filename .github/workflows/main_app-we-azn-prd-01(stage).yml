@@ -10,7 +10,8 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_WEBAPP_NAME: app-we-azn-prd-01-stage	
+  AZURE_WEBAPP_NAME: app-we-azn-prd-01
+  SLOT_NAME: stage
   AZURE_WEBAPP_PACKAGE_PATH: ./publish
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 8.0.x
@@ -54,6 +55,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        slot-name: stage
+        slot-name: ${{ env.SLOT_NAME }}
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
