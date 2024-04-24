@@ -50,7 +50,6 @@ jobs:
       with:
         name: ${{ env.AZURE_WEBAPP_NAME }}
         path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-        slot-name: 'stage'
     - name: Deploy to Azure WebApp
       uses: azure/webapps-deploy@v2
       with:
